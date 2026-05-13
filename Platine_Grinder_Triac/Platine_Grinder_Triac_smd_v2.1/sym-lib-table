@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Additional_Components")(type "KiCad")(uri "C:/Users/skm1tt/WorkSpace/KiCad/Grinderplatine_wTriac/Platine_Grinder_Triac/Additional_Components_.kicad_sym")(options "")(descr ""))
+  (lib (name "UsedComponents")(type "KiCad")(uri "C:/Users/skm1tt/WorkSpace/KiCad/Grinderplatine_wTriac/Platine_Grinder_Triac/UsedComponents.kicad_sym")(options "")(descr ""))
+)

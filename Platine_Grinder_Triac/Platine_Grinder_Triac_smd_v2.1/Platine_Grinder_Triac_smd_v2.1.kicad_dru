@@ -1,0 +1,38 @@
+(version 1)
+
+(rule ClearanceSig
+	(constraint clearance (min 0.3mm))
+	(condition "(A.Netclass == 'Signal')")
+#	(condition "(A.Netclass == 'Signal') && (B.Netclass == 'Signal')")
+)
+
+(rule ClearanceMainN
+#	(constraint clearance (min 0.7mm))
+	(constraint clearance (min 1.8mm))
+	(condition "A.hasNetclass('Main_N')")
+)
+
+(rule ClearanceMainN_2All
+	(constraint clearance (min 1.8mm))
+	(condition "A.hasNetclass('Main_N') && !B.hasNetclass('Main_N')")
+)
+
+(rule ClearanceMainL_2All
+	(constraint clearance (min 1.8mm))
+	(condition "A.hasNetclass('Main_L') && !B.hasNetclass('Main_L')")
+)
+
+(rule ClearanceVbus+_2All
+	(constraint clearance (min 1.5mm))
+	(condition "A.hasNetclass('Vbus+') && !B.hasNetclass('Vbus+')")
+)
+
+(rule ClearanceVbus-_2All
+	(constraint clearance (min 1.5mm))
+	(condition "A.hasNetclass('Vbus-') && !B.hasNetclass('Vbus-')")
+)
+
+(rule ClearanceVbusSpl_2All
+	(constraint clearance (min 0.75mm))
+	(condition "A.hasNetclass('Vbus_split') && !B.hasNetclass('Vbus_split')")
+)
